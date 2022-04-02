@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- /*
+ * AUTH:MG193.7
+ * AUTH:12021052020程为民
+ */ -->
+<html>
+<head>
+	<style type="text/css">
+		*
+		{font-family:"Courier New",Times,serif;}
+
+		#chatwindow,#inputwindow
+		{
+			border: white;
+			border-width: 1;
+			border-style:solid;
+		}
+
+		html,body
+		{
+			height: 100%;
+			overflow: auto;
+			margin: 0;
+			background-color: black;
+		}
+
+		.root
+		{
+			display: grid;
+			grid: 5%/auto;
+			height: 100%;
+			width: 100%;
+		}
+
+		.window
+		{
+			color: white;
+			display: grid;
+			grid: 100%/auto 20%;
+			height: 100%;
+			width: 100%;
+		}
+
+		.chater
+		{
+			color: white;
+			display: grid;
+			grid: 90% 8%/auto;
+		}
+
+		p
+		{
+			color: white;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+	<title>BBS BROADCAST</title>
+</head>
+<body>
+	<div class="root">
+		<div style="background-color: #2121bd;width: 100%;height: 100%;color: yellow;position: relative;">
+			<div style="position:absolute;top:18%;left:2%;">1337 BBS BROADCAST SYSTEM V0.1</div>
+		</div>
+		<div class="window">
+			<div class="chater">
+				<div id="chatwindow" style="overflow:scroll;height:550px;"></div>
+				<div style="position:relative;text-align:center;">
+					<div style="position:absolute;bottom:0;width:99%;" id="inputwindow">
+						<div style="float:left;width: 10%;overflow: hidden;height: 100%;"><font id="uname">Null</font></div>
+						<div style="height:100%;text-align:right;"><input type="text" style="background: transparent;width:85%;color:white;bottom:0;" hint="Message" id="msginput"></div>
+					</div>
+				</div>
+			</div>
+			<div style="border: white;border-style: solid;border-width: 1;">
+				<div style="text-align: center;border: white;border-style: solid;width: 1;">UserList</div>
+				<div id="userlist" style="overflow:auto;">
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="./Js/chat.js"></script>
+</body>
+</html>
