@@ -2,6 +2,10 @@
 IRC Style Web ChatRoom  
 IRC风格的网页聊天室  
 
+聊天室截图
+----
+![IRC-STYLE-CHATROOM](https://user-images.githubusercontent.com/89259981/161363280-dbb6a70e-3745-4a6c-a55a-8a5bc941df2e.png)
+
 前言
 ----
 这个聊天室我花了一晚上赶着写出来的.  
