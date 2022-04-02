@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- /*
  * AUTH:MG193.7
- * AUTH:12021052020程为民
  */ -->
 <html>
 <head>
@@ -54,17 +53,17 @@
 		}
 	</style>
 	<meta charset="utf-8">
-	<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>BBS BROADCAST</title>
 </head>
 <body>
 	<div class="root">
-		<div style="background-color: #2121bd;width: 100%;height: 100%;color: yellow;position: relative;">
+		<div style="background-color:#2121bd;width:100%;height:100%;color:yellow;position:relative;">
 			<div style="position:absolute;top:18%;left:2%;">1337 BBS BROADCAST SYSTEM V0.1</div>
 		</div>
 		<div class="window">
 			<div class="chater">
-				<div id="chatwindow" style="overflow:scroll;height:550px;"></div>
+				<div id="chatwindow"></div>
 				<div style="position:relative;text-align:center;">
 					<div style="position:absolute;bottom:0;width:99%;" id="inputwindow">
 						<div style="float:left;width: 10%;overflow: hidden;height: 100%;"><font id="uname">Null</font></div>
@@ -78,7 +77,10 @@
 			</div>
 		</div>
 	</div>
-	
-	<script type="text/javascript" src="./Js/chat.js"></script>
+	<script type="text/javascript">
+		var script = document.createElement("script");
+		script.src = "./Js/chat.js?" + Math.random();
+		document.getElementsByTagName("body")[0].appendChild(script);
+	</script>
 </body>
 </html>

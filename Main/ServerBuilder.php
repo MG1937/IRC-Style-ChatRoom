@@ -22,7 +22,7 @@ socket_set_option($socket,SOL_SOCKET, SO_RCVTIMEO, array("sec"=>5, "usec"=>0));
 
 function socketAccept($socket)
 {
-	$read = socket_read($socket,MAX_READ);
+	$read = socket_read($socket,MAX_READ*10);
 	echo "$read\r\n";
 	if(!$read) return;
 	$packs = explode("*", $read, 3);

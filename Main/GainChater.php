@@ -10,7 +10,7 @@ error_reporting(0);
 set_time_limit(0);
 
 $uname = $_REQUEST['u'];
-if(!isset($uname)||strlen($uname) >= 10||$uname == "NuN"||$uname == "undefined") return;
+if(!isset($uname)||strlen($uname) > 20||$uname == "NuN"||$uname == "undefined") return;
 $msg = $_POST['d'];
 
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
@@ -22,21 +22,21 @@ switch ($_GET['a']) {
 	case 'send':
 	{
 		socket_write($socket, "2*${uname}*${msg}");
-		$callback = socket_read($socket, 2048);
+		$callback = socket_read($socket, MAX_READ*10);
 		break;
 	}
 
 	case 'get':
 	{
 		socket_write($socket, "3*${uname}*");
-		$callback = socket_read($socket, 2048);
+		$callback = socket_read($socket, MAX_READ*10);
 		break;
 	}
 
 	case 'alluser':
 	{
 		socket_write($socket, "4*${uname}*");
-		$callback = socket_read($socket, 20480);
+		$callback = socket_read($socket, MAX_READ*10);
 		break;
 	}
 
