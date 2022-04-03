@@ -1,7 +1,6 @@
 <?
 /*
  * AUTH:MG193.7
- * AUTH:12021052020程为民
  */
 
 class Users

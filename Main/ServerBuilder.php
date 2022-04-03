@@ -1,7 +1,6 @@
 <?php
 /*
  * AUTH:MG193.7
- * AUTH:12021052020程为民
  */
 include(__DIR__.'/Chat/Users.php');
 include(__DIR__.'/Chat/Messages.php');
